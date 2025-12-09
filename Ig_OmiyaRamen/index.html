@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Ig_OmiyaRamen</title>
+  <link rel="icon" href="images/Ig_OmiyaRamen_icon.png">
+  <meta name="robots" content="noindex, nofollow"><!-- SEOに載らないようにする -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/slick.css">
+  <link rel="stylesheet" href="/css/slick-theme.css">
+</head>
+
+<body ontouchstart="">
+
+<main>
+  <section class="work-page_wrapper">
+    <h1>「大宮ラーメン店3選」Instagram投稿</h1>
+    <div class="work-explanation">
+      <p>Instagramのまとめ投稿を想定して制作しました。<br>
+      表紙から裏表紙まで、全5枚で構成しています。<br>
+      赤や黄色を基調に、食欲をそそるあたたかみのある配色にしました。<br>
+      写真は生成AIで作成し、明るさや色味を調整。<br>
+      文字は小さくなりすぎないよう配置し、<br>
+      ビジュアル重視で目を引くデザインを意識しました。</p>
+    </div>
+    <div class="work_tool">
+      <p>使用ツール：<img src="../images/icon_Canva.png" class="tool-icon">Canva</p>
+    </div>
+    <!--カルーセル-->
+    <div class="carousel">
+      <div class="img_wrapper"><img src="images/Mockup_Ig_OmiyaRamen_1.jpeg" alt=""></div>
+      <div class="img_wrapper"><img src="images/Mockup_Ig_OmiyaRamen_2.jpeg" alt=""></div>
+      <div class="img_wrapper"><img src="images/Mockup_Ig_OmiyaRamen_3.jpeg" alt=""></div>
+      <div class="img_wrapper"><img src="images/Mockup_Ig_OmiyaRamen_4.jpeg" alt=""></div>
+      <div class="img_wrapper"><img src="images/Mockup_Ig_OmiyaRamen_5.jpeg" alt=""></div>
+    </div>
+    <div class="work-img">
+      <img src="images/Ig_OmiyaRamen_1.png">
+      <img src="images/Ig_OmiyaRamen_2.png">
+      <img src="images/Ig_OmiyaRamen_3.png">
+      <img src="images/Ig_OmiyaRamen_4.png">
+      <img src="images/Ig_OmiyaRamen_5.png">
+    </div>
+  </div>
+  <div class="goback moving-underline">
+    <a href="../works.html#other"><< 作品一覧へ戻る</a>
+  </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Shindo Luna
+</footer>
+
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script src="/js/slick.min.js"></script>
+
+<!--カルーセル-->
+<script>
+$('.carousel').slick({
+  centerMode: true,
+  centerPadding: '25%',
+  slidesToShow: 1,
+  arrows: true,
+  prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+  nextArrow: '<div class="slide-arrow next-arrow"></div>',
+  dots: true,
+  dotsClass: 'dots-wrap', // dotsデフォルトのクラス名からdots-wrapに変更
+  autoplay: true,
+  autoplaySpeed: 3000,
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        centerMode: false,   // 中央寄せを切る
+        centerPadding: '0',  // パディングをリセット
+        slidesToShow: 1      // 一枚表示に固定
+      }
+    }
+  ]
+});
+</script>
+
+
+</body>
+</html>
