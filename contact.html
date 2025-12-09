@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Luna Shindo's Portfolio</title>
+  <link rel="icon" href="images/myfavicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/myfavicon.png">
+  <meta name="robots" content="noindex, nofollow"><!-- SEOに載らないようにする -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body ontouchstart="">
+
+<header class="site-header">
+  <div class="header-inner">
+    <h1 class="mylogo"><a href="index.html"><img src="images/mylogo.png"></a></h1>
+    <nav class="global-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-label">MENU</label>
+      <ul>
+        <li><a href=about.html>About</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="index">
+  <section class="hero">
+    <div class="hero-gradient"></div><!-- 背景装飾用 -->
+    <h2>
+			<span class="h2_myname">Contact</span>
+		</h2>
+	</section>
+<!----- Contact ----->
+  <section class="section_wrapper contact">
+    <div class="contents_wrapper">
+        <p>お問い合わせはeメール、Instagramのダイレクトメッセージ(DM)からも承っております。</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYtV_O15pN4csbSVXJ8diIZyM1Pej0ghmStUZEJ0WT-UykJg/viewform?embedded=true" width="640" height="1500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Shindo Luna
+</footer>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+  document.querySelectorAll('.global-nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('menu-toggle').checked = false;
+    });
+  });
+</script>
+</body>
+</html>
