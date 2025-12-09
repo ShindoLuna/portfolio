@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Luna Shindo's Portfolio</title>
+  <link rel="icon" href="images/myfavicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/myfavicon.png">
+  <meta name="robots" content="noindex, nofollow"><!-- SEOに載らないようにする -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body ontouchstart="">
+
+<header class="site-header">
+  <div class="header-inner">
+    <h1 class="mylogo"><a href="index.html"><img src="images/mylogo.png"></a></h1>
+    <nav class="global-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-label">MENU</label>
+      <ul>
+        <li><a href=about.html>About</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-gradient"></div><!-- 背景装飾用 -->
+    <h2>
+			<span class="h2_myname">About</span>
+		</h2>
+	</section>
+
+  <section id="about" class="section_wrapper">
+    <h2 class="section-title">Profile<span class="sub-title">プロフィール</span></h2>
+    <div class="contents_wrapper">
+      <div class="profile contents_wrapper">
+        <div class="profile_inner"></div>
+        <div class="about_photo">
+          <img src="images/my_photo.jpeg" alt="シンドウルナの写真">
+        </div>
+        <div class="about_inner">
+        <div class="about_myname">
+          <span class="myname_hiragana">シンドウ ルナ</span>　-　Shindo Luna
+        </div>
+          <div class="about_sentence">
+            <p>栃木県生まれ。<br>大学卒業後に飲食業界へ就職し、その後 Webデザインを学び始めました。<br>職業訓練や前職での研修を通して、画像編集、バナー・ポスター等のデザインから、LP・Webサイトなどのコーディングまで幅広く経験しています。<br>現在もWebデザイナーを目指して学習と制作を継続中です。<br>「かわいさ」と「見やすさ」を両立したデザインを得意としています。</p>
+          </div>
+        </div>
+      </div>
+      <div class="skills contents_wrapper">
+        <h3>Skills<span class="sub-title">スキル</span></h3>
+        <dl class="skill_list">
+          <div class="skill-item">
+            <div class="skill-label">
+              <img src="images/icon_Photoshop.png" class="skill-icon">
+              <dt>Photoshop</dt>
+            </div>
+            <dd class="star-rating" data-rating="5">
+              <span class="visually-hidden">スキルレベル：5</span>
+            </dd>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">
+              <img src="images/icon_Illustrator.png" class="skill-icon">
+              <dt>Illustrator</dt>
+            </div>
+            <dd class="star-rating" data-rating="3">
+              <span class="visually-hidden">スキルレベル：3</span>
+            </dd>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">
+              <img src="images/icon_HTML.png" class="skill-icon">
+              <dt>HTML</dt>
+            </div>
+            <dd class="star-rating" data-rating="4">
+              <span class="visually-hidden">スキルレベル：4</span>
+            </dd>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">
+              <img src="images/icon_CSS.png" class="skill-icon">
+              <dt>CSS</dt>
+            </div>
+            <dd class="star-rating" data-rating="4">
+              <span class="visually-hidden">スキルレベル：4</span>
+            </dd>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">
+              <img src="images/icon_JavaScript.png" class="skill-icon">
+              <dt>JavaScript</dt>
+            </div>
+            <dd class="star-rating" data-rating="2">
+              <span class="visually-hidden">スキルレベル：2</span>
+            </dd>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">
+              <img src="images/icon_Canva.png" class="skill-icon">
+              <dt>Canva</dt>
+            </div>
+            <dd class="star-rating" data-rating="5">
+              <span class="visually-hidden">スキルレベル：5</span>
+            </dd>
+          </div>
+                    <div class="skill-item">
+            <div class="skill-label">
+              <img src="images/icon_GoogleSheets.png" class="skill-icon">
+              <dt>Google Sheets</dt>
+            </div>
+            <dd class="star-rating" data-rating="3">
+              <span class="visually-hidden">スキルレベル：3</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Shindo Luna
+  </footer>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+  document.querySelectorAll('.global-nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('menu-toggle').checked = false;
+    });
+  });
+</script>
+</body>
+</html>
