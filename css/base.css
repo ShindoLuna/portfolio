@@ -1,0 +1,545 @@
+@charset "utf-8";
+
+/*======================== common ========================*/
+* {
+	margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+	font-size: 12px;
+  color: #555;
+  height: 100%;
+}
+body {
+  text-align: center;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #333;
+}
+h1, h3, h4, li {
+  font-family: 'Playfair Display', serif;
+}
+h2 {
+  font-family: "Monomaniac One", sans-serif;
+}
+a {
+  text-decoration: none;
+  transition: 0.5s;
+  color: #333;
+}
+a:hover, a:active {
+  opacity: 0.5;
+}
+li {
+  list-style: none;
+  display: block;
+}
+p {
+  line-height: 1.4em;
+}
+
+/*======================== header ========================*/
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f1edff99;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0.25rem 0;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw;
+  margin: 0 auto ;
+}
+.mylogo img {
+  margin-top: 0.5rem;
+	width: 5rem;
+}
+
+/*========== nav ==========*/
+.menu-label, .global-nav li a {
+  font-family: "Monomaniac One", sans-serif;
+  color: #fff;
+	text-shadow:
+    1px 1px 2px rgba(255, 0, 128, 0.8),
+    -1px -1px 2px rgba(0, 0, 0, 0.8);
+}
+.global-nav ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  top: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 1rem;
+  z-index: 100;
+}
+.global-nav #menu-toggle:checked + .menu-label + ul {
+  display: flex;
+}
+.menu-label {
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+}
+.global-nav #menu-toggle {
+	display: none;
+}
+.global-nav ul {
+  padding: 1.5rem;
+}
+.global-nav li a {
+	font-size: 20px;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+
+/*======================== main ========================*/
+/*========== top ==========*/
+.hero {
+  position: relative;
+  background: url(../images/topimg.png) center/cover no-repeat;
+  color: #fff;
+  padding: 5rem 3rem;
+  overflow: hidden;
+}
+.hero h2 {
+  font-size: 36px;
+	max-width: 80vw;
+	margin: 4rem auto 1rem;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  color: #f4f3ff;
+	text-shadow:
+    3px 3px 3px rgba(255, 0, 128, 0.7),
+    -2px -2px 1px rgba(55, 55, 55, 0.70),
+    4px 4px 10px #fff;
+}
+.h2_welcometo {
+  text-align: left;
+}
+.h2_myname img {
+	margin: 3rem auto;
+  text-align: center;
+  width: 72vw;
+}
+.h2_portfolio {
+  text-align: right;
+}
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg,
+    #ffffff 0%,
+    #6efff8 15%,
+    #ffffff 35%,
+    #ff1495 50%,
+    #ffffff 70%,
+    #6efff8 85%,
+    #ffffff 100%
+  );
+  background-size: 300% 300%;
+  animation: shine 10s linear infinite;
+  mix-blend-mode: lighten;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+@keyframes shine {
+  0%   { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/*========== セクション共通 ==========*/
+.index .section_wrapper {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url(../images/Adobe_Aurora_695_480.jpg) center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 6rem 0;
+}
+.section_wrapper {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)),
+    url(../images/Adobe_Aurora_725_480.jpg) center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 6rem 0;
+}
+.section-title {
+	font-size: 36px;
+	font-weight: normal;
+	text-align: left;
+	margin: 0 4rem 1rem;
+	color: #fff;
+	text-shadow:
+    3px 3px 3px rgba(255, 0, 149, 0.7),
+    -2px -2px 1px rgba(55, 55, 55, 0.70),
+    4px 4px 10px #fff;
+}
+.section_wrapper h3 {
+  font-size: 22px;
+  padding: 1.5rem;
+}
+.sub-title {
+	font-size: 14px;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-weight: normal;
+	margin: 0 1rem;
+	color: #333;
+	text-shadow: none;
+}
+.contents_wrapper {
+	margin: 6rem auto;
+	max-width: 90vw;
+}
+
+/* --- Moving Underline：アニメーション専用 --- */
+/* 共通：下線の流れるアニメーション */
+.moving-underline {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+}
+/* 常時表示する下線 */
+.moving-underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #333; /* 常時表示する色 */
+}
+/* ホバーで流れる下線 */
+.moving-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;   /* 左から出す */
+  width: 100%;
+  height: 2px;
+  background: #333; /* 流れる線の色 */
+  transition: none;
+}
+.moving-underline:hover::after,
+.moving-underline:focus::after {
+  animation: underline-flow 0.8s ease-in-out forwards;
+}
+/* 下線アニメーション */
+@keyframes underline-flow {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/* More View専用設定 */
+.moreview {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  display: inline-block;
+}
+.pagetop {
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 30px;
+  filter:
+    drop-shadow(1px 0 #fff)
+    drop-shadow(-1px 0 #fff)
+    drop-shadow(0 1px #fff)
+    drop-shadow(0 -1px #fff);
+}
+
+/*========== works ==========*/
+#website, #landingpage, #print, #other {
+  scroll-margin-top: 100px;
+}
+.index .work-type-title {
+  width: 100%;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.card-link {
+  display: flex;          /* カードを縦方向に伸ばす */
+  flex-direction: column; /* 高さ揃え用 */
+}
+.card {
+  border: 1px solid #e1e6f5;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  background-color: #ffffffd0;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative; /* h3位置用 */
+  display: flex;       /* カード内の高さ揃え用 */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;        /* 親リンクの高さに合わせる */
+}
+.index .card_website {/* Webサイト */
+  border: 3px solid #ffb6e7;
+  box-shadow: 1px 1px 10px #ff7dd4d0;
+}
+.index .card_lp {/* LP */
+  border: 3px solid #fff188;
+  box-shadow: 1px 1px 10px #ffd87dd0;
+}
+.index .card_print {/* 印刷物 */
+  border: 3px solid #abf8ff;
+  box-shadow: 1px 1px 10px #76eaffd0;
+}
+.index .card_other {/* その他の作品 */
+  border: 3px solid #eab6ff;
+  box-shadow: 1px 1px 10px #cf7dffd0;
+}
+.mockup {
+  position: relative;
+  margin: 0rem auto 1rem;
+}
+.mockup_pc {
+  width: 100%;
+}
+.mockup_resp .mockup_pc {
+  position: relative;
+  left: -10px;
+  z-index: 1;
+}
+.mockup_mb {
+  position: absolute;
+  bottom: -5%;
+  right: -5px;
+  z-index: 2;
+  width: 25%;
+}
+.card-link:hover .card, 
+.card-link:active .card {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+.card .work-title {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+.card .work-title_sub {
+	font-weight: normal;
+	font-size: 12px;
+	margin: 0 0.1rem;
+}
+.card p {
+  font-size: 13px;
+}
+.works-print, .works-other {
+  max-width: 80%;
+  margin: 1rem auto;
+}
+.img-shadow {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3)
+}
+
+/*========== profile ==========*/
+.hajimemashite {
+  font-family: "Monomaniac One", sans-serif;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0.25rem;
+  width: 60vw;
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: clamp(24px, 6vw, 100px);/* 画面幅に応じて最大限大きく：24px〜120pxの範囲 */
+  filter:
+    drop-shadow(3px 0 #fff)
+    drop-shadow(-3px 0 #fff)
+    drop-shadow(0 3px #fff)
+    drop-shadow(0 -3px #fff);
+}
+
+.hajimemashite span:nth-child(1) { color: #ff7eb8; }
+.hajimemashite span:nth-child(2) { color: #ff9f5f; }
+.hajimemashite span:nth-child(3) { color: #ffd65f; }
+.hajimemashite span:nth-child(4) { color: #a4e86d; }
+.hajimemashite span:nth-child(5) { color: #60d5ff; }
+.hajimemashite span:nth-child(6) { color: #8ca8ff; }
+.hajimemashite span:nth-child(7) { color: #c59eff; }
+.hajimemashite span:nth-child(8) { color: #ff7eb8; }
+.hajimemashite span:nth-child(9) { color: #ff9f5f; }
+.hajimemashite span:nth-child(10) { color: #ffd65f; }
+.hajimemashite span:nth-child(11) { color: #a4e86d; }
+.hajimemashite span:nth-child(12) { color: #60d5ff; }
+.hajimemashite span:nth-child(13) { color: #8ca8ff; }
+.hajimemashite span:nth-child(14) { color: #c59eff; }
+.hajimemashite span:nth-child(15) { color: #ff7eb8; }
+.hajimemashite span:nth-child(16) { color: #ff9f5f; }
+
+.hajimemashite span {
+  display: inline-block;
+  animation: bounce 0.6s ease both;
+  animation-iteration-count: infinite;
+  animation-duration: 4s; /* ← ここで1サイクルを揃える */
+}
+
+/* 0.2秒ずつ遅延（16文字分） */
+.hajimemashite span:nth-child(1)  { animation-delay: 0s; }
+.hajimemashite span:nth-child(2)  { animation-delay: 0.2s; }
+.hajimemashite span:nth-child(3)  { animation-delay: 0.4s; }
+.hajimemashite span:nth-child(4)  { animation-delay: 0.6s; }
+.hajimemashite span:nth-child(5)  { animation-delay: 0.8s; }
+.hajimemashite span:nth-child(6)  { animation-delay: 1.0s; }
+.hajimemashite span:nth-child(7)  { animation-delay: 1.2s; }
+.hajimemashite span:nth-child(8)  { animation-delay: 1.4s; }
+.hajimemashite span:nth-child(9)  { animation-delay: 1.6s; }
+.hajimemashite span:nth-child(10) { animation-delay: 1.8s; }
+.hajimemashite span:nth-child(11) { animation-delay: 2.0s; }
+.hajimemashite span:nth-child(12) { animation-delay: 2.2s; }
+.hajimemashite span:nth-child(13) { animation-delay: 2.4s; }
+.hajimemashite span:nth-child(14) { animation-delay: 2.6s; }
+.hajimemashite span:nth-child(15) { animation-delay: 2.8s; }
+.hajimemashite span:nth-child(16) { animation-delay: 3.0s; }
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(-15px); }
+  20%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+.about_photo {
+  margin: 0 auto 2rem;
+}
+.about_photo img {
+	width: 400px;
+	max-width: 60vw;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.about_inner {
+  margin: 1rem auto;
+}
+.about_myname {
+	font-weight: normal;
+  font-size: 18px;
+}
+.myname_hiragana {
+	font-size: 30px;
+  font-family: "Monomaniac One", sans-serif;
+  color: #555;
+  letter-spacing: 0.25rem;
+  filter:
+    drop-shadow(2px 0 #fff)
+    drop-shadow(-2px 0 #fff)
+    drop-shadow(0 2px #fff)
+    drop-shadow(0 -2px #fff);
+}
+.about_sentence {
+	width: 55vw;
+  margin: 2rem auto;
+}
+.about_sentence p {
+	text-align: left;
+}
+/*===== moreview =====*/
+.moreview {
+  display: inline-block;
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+    filter:
+    drop-shadow(1px 0 #fff)
+    drop-shadow(-1px 0 #fff)
+    drop-shadow(0 1px #fff)
+    drop-shadow(0 -1px #fff);
+}
+
+
+/*======================== footer ========================*/
+footer {
+	background-color: #fff3fb;
+}
+
+
+/*======================== responsive ========================*/
+@media screen and (min-width: 769px) {
+	html {
+		font-size: 16px;
+	}
+/*========== nav ==========*/
+  .menu-label {
+    display: none;
+  }
+  .global-nav ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .global-nav li a {
+    padding: 0rem 2rem;
+		font-size: 36px;
+  }
+/*========== top ==========*/
+  .hero h2 {
+    font-size: 72px;
+	}
+	.h2_myname img {
+		margin: 2rem auto;
+    max-width: 1200px;
+  }
+/*========== セクション共通 ==========*/
+	.site-title {
+		font-size: 36px;
+		margin: 0 6rem 4rem;
+	}
+/*========== profile ==========*/
+	.about .contents_wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.about_photo img {
+		max-width: 40vw;
+	}
+	.about_sentence {
+		max-width: 40vw;
+    margin-left: 2rem;
+    font-size: 14px;
+	}
+  .myname_hiragana {
+    font-size: 36px;
+    font-family: "Monomaniac One", sans-serif;
+    color: #555;
+    letter-spacing: 0.25rem;
+    filter:
+      drop-shadow(3px 0 #fff)
+      drop-shadow(-3px 0 #fff)
+      drop-shadow(0 3px #fff)
+      drop-shadow(0 -3px #fff);
+  }
+/*===== moreview =====*/
+	.moreview {
+		font-size: 30px;
+	}
+
+}
+

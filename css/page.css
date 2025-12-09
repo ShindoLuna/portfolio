@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/*======================== about ========================*/
+.skills {
+  margin-top: 4rem
+}
+.skill_list {
+  margin: 2rem auto 0;
+  padding: 0;
+  max-width: 300px;
+}
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+.skill-label {
+  display: flex;
+}
+.skill-icon {
+  width: 1.5rem;
+}
+.skill-item dt {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.skill-item dd {
+  position: relative;
+  height: 1.2rem;
+}
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+/* 星のベース（灰色の星） */
+.star-rating::before {
+  content: '★★★★★';
+  letter-spacing: 0.2em;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+/* 星の上書き（評価分だけゴールドに） */
+.star-rating::after {
+  content: '★★★★★';
+  letter-spacing: 0.2em;
+  color: #ffd700;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(var(--rating, 0) * 20%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* data-ratingからCSS変数に反映 */
+.star-rating[data-rating='1'] { --rating: 1; }
+.star-rating[data-rating='2'] { --rating: 2; }
+.star-rating[data-rating='3'] { --rating: 3; }
+.star-rating[data-rating='4'] { --rating: 4; }
+.star-rating[data-rating='5'] { --rating: 5; }
+
+
+/*======================== works ========================*/
+.works_list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.5rem;
+}
+@media (min-width: 1200px) {
+    .works_list ul {
+      grid-template-columns: repeat(4, 1fr); /* 900px以上なら4列 */
+      gap: 2rem;
+      max-width: 1600px;
+    }
+}
+.works_list a.button {/*ボタン*/
+  max-width: 40vw;
+  display: inline-block;
+  padding: 0rem 2rem;
+  background-color: #fffd;
+  border-radius: 50px;
+  transition: all 0.15s ease;
+}
+.works_list a.button:hover, a.button:active {
+  transform: translateY(3px); /* 押し込まれる */
+  box-shadow: 0 1px 0 #bbb;   /* 影も薄くする */
+}
+.works_list a.button img {
+  width: 100%;
+  display: block;
+  height: auto;
+  margin: 0.5rem 0;
+}
+/*ボタンデザイン*/
+.button_website {
+  border: 2px solid #ffb6e7;
+  box-shadow: 1px 4px 10px #e776c1d0;
+}
+.button_lp {
+  border: 2px solid #fff188;
+  box-shadow: 1px 4px 10px #e9d866d0;
+}
+.button_print {
+  border: 2px solid #abf8ff;
+  box-shadow: 1px 4px 10px #76cde7d0;
+}
+.button_other {
+  border: 2px solid #eab6ff;
+  box-shadow: 1px 4px 10px #a776e7d0;
+}
+.work-types {
+	margin-bottom: 2rem;
+}
+.work-title {
+  margin: 4rem auto 1rem;
+}
+.tool-icon {
+  width: 1.25rem;
+  margin: auto 0.25rem;
+  vertical-align: top;
+}
+#works .work-type-title {
+  width: 54vw;
+  max-width: 800px;
+}
+#works .card-grid {
+  margin-bottom: 10rem;
+}
+
+/*======================== Contact ========================*/
+.contact {
+  text-align: center;
+}
+.contact P {
+  max-width: 80vw;
+  margin: auto;
+}
+.contact iframe {
+  max-width: 90vw;
+  margin: 2rem auto;
+}
+
+/*======================== responsive ========================*/
+@media screen and (min-width: 769px) {
+  .profile {
+    display: flex
+	}
+	.skill_list {
+    max-width: 500px;
+	}
+}
