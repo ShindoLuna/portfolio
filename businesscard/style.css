@@ -145,8 +145,8 @@ h2 {
     margin: 5rem;
   }
   .work-img img {
-  width: 50vw;
-  max-width: 500px;
+  width: 500px;
+  max-width: 30vw;
   margin: 1rem;
 }
 }
