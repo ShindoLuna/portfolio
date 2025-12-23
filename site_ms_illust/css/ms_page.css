@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*============ home ============*/
+
+.topimg {
+    margin: 1rem auto 5rem;
+    text-align: center;
+}
+.topimg img {
+    width: 100vw;
+}
+
+.img_jewel img {
+    width: 8vw;
+}
+
+#topabout h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#topabout h2 img {
+    height: 3rem;
+    padding: 0 2px 4px 0;
+}
+#topabout div p {
+    margin: 0 auto;
+    width: 80vw;
+} 
+
+.newslist  {
+    justify-content: center;
+}
+.newslist dl {
+    width: 85vw;
+    margin: 2.5rem auto;
+    padding-bottom: 1rem;
+    color: #ee1b84;
+    border-bottom: dotted #f5a 3px;
+    text-align: left;
+}
+.newslist dl a {
+    text-underline-offset: 0.2rem;
+}
+.newslist dt {
+    margin-bottom: 0.5rem;
+}
+.newslist dd {
+    margin-left: 1rem;
+}
+
+
+/*============ about ============*/
+#about .sentence {
+    padding: 3rem auto;
+}
+.history {
+    padding: 2rem 0;
+    text-align: center;
+    color: #555;
+}
+.history dl {
+    display: flex;
+    text-align: left;
+}
+.history dd {
+    margin: 0 0 1rem 2rem;
+}
+.history dd a {
+    color: #f5a;
+    text-decoration: underline;
+    transition: all o.5s ease;
+}
+#about .sentence img {
+    width: 30vw;
+    border-radius: 10px;
+}
+
+
+/*============ event ============*/
+
+#event .contents_wrapper img {
+    width: 600px;
+    max-width: 80vw;
+    box-shadow: 5px 5px 10px rgba(100, 0, 50, 0.4);
+    margin-bottom: 1rem;
+}
+.event_contents .event_title {
+    font-weight: bold;
+    color: #ee1b84;
+}
+.twitter-tweet {
+    max-width: 550px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin: 1rem auto;
+}
+.ticket a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #f5a;
+}
+
+
+/*============ member ============*/
+.memberimg img {
+    width: 300px;
+    max-width: 80vw;
+    margin: 1rem;
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px rgba(100, 0, 50, 0.4);
+}
+.memberimg img:hover, .memberimg img:active {
+    opacity: 0.9;
+}
+
+
+/*============ news ============*/
+.newslist {
+    margin-top: 3rem;
+}
+.newslist li a {
+    text-decoration: underline;
+}
+.newslist a {
+    transition: 0.5s;
+}
+
+
+/*============ contact ============*/
+#contact {
+    text-align: center;
+}
+#contact p a {
+    color: #f5a;
+    text-decoration: underline;
+}
+#contact iframe {
+    max-width: 80vw;
+    margin: 2rem auto;
+}
+.newslist dd a {
+    transition: 0.5s;
+}
+
+
+/*============ news240516 ============*/
+.news240516 .sentence {
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+}
+.news240516 .sentence img {
+    width: 80%;
+}
