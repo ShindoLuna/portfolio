@@ -107,7 +107,7 @@ p {
 /*========== top ==========*/
 .hero {
   position: relative;
-  background: url(https://github.com/ShindoLuna/portfolio/blob/main/images/topimg.jpg?raw=true) center/cover no-repeat;
+  background: url(images/topimg.jpg) center/cover no-repeat;
   color: #fff;
   padding: 5rem 3rem;
   overflow: hidden;
