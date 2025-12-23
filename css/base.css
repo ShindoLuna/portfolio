@@ -107,7 +107,7 @@ p {
 /*========== top ==========*/
 .hero {
   position: relative;
-  background: url(images/topimg.jpg) center/cover no-repeat;
+  background: url(../images/topimg.jpg) center/cover no-repeat;
   color: #fff;
   padding: 5rem 3rem;
   overflow: hidden;
@@ -145,7 +145,7 @@ p {
     #ffffff 0%,
     #6efff8 15%,
     #ffffff 35%,
-    #ff1495 50%,
+    #ff307c 50%,
     #ffffff 70%,
     #6efff8 85%,
     #ffffff 100%
