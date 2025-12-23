@@ -2,35 +2,122 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ms_instaxcard</title>
-  <link rel="icon" href="../images/myfavicon.png">
-  <meta name="robots" content="noindex, nofollow"><!-- SEOに載らないようにする -->
+  <title>Luna Shindo's Portfolio</title>
+  <link rel="icon" href="images/myfavicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/myfavicon.png">
+  <meta name="description" content="シンドウルナのポートフォリオサイト">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/page.css">
 </head>
 
 <body ontouchstart="">
 
-<main>
-  <section class="work-page_wrapper">
-    <h1>架空デザイン会社の名刺</h1>
-    <div class="work-explanation">
-      <p>所属していたダンスグループで使用するチェキ券をCanvaで制作しました。<br>グループの雰囲気に合うよう、キラキラで可愛らしいデザインを意識しました。<br>メンバーカラーを取り入れることで、<wbr>ひと目で誰の券かわかるようにしています。<br>文字も大きく配置し、視認性を高めました。</p>
-    </div>
-    <div class="work_tool">
-      <p>使用ツール：<img src="../images/icon_Canva.png" class="tool-icon">Canva</p><br>
-    </div>
-    <div class="work-img">
-      <img src="images/businesscard_LuminaDesignInc.png">
-      <img src="images/businesscard_leaf-design.png">
-    </div>
+<header class="site-header">
+  <div class="header-inner">
+    <h1 class="mylogo"><a href="index.html"><img src="images/mylogo.png"></a></h1>
+    <nav class="global-nav">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-label">MENU</label>
+      <ul>
+        <li><a href=about.html>About</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="goback moving-underline">
-    <a href="../works.html#print"><< 作品一覧へ戻る</a>
-  </div>
+</header>
+
+<main class="index">
+  <section class="hero">
+    <div class="hero-gradient"></div><!--背景装飾用-->
+    <h2>
+			<span class="h2_welcometo">Welcome to</span>
+			<span class="h2_myname"><img src="images/SHINDOLUNA.png" alt="Shindo Luna"></span>
+			<span class="h2_portfolio">Portfolio</span>
+		</h2>
+	</section>
+
+  <section class="section_wrapper about">
+    <div class="hajimemashite_wrapper">
+      <h2 class="hajimemashite">
+        <span>は</span><span>じ</span><span>め</span><span>ま</span><span>し</span><span>て</span><span>、</span>
+        <span>シ</span><span>ン</span><span>ド</span><span>ウ</span>
+        <span>ル</span><span>ナ</span><span>で</span><span>す</span><span>。</span>
+      </h2>
+    </div>
+    <div class="contents_wrapper">
+      <div class="about_photo">
+        <img src="images/my_photo.jpeg" alt="シンドウルナの写真">
+      </div>
+      <div class="about_inner">
+        <div class="about_myname">
+          <span class="myname_hiragana">シンドウ ルナ</span>　-　Shindo Luna
+        </div>
+        <div class="about_sentence">
+          <p>栃木県生まれ。<br>大学卒業後、飲食業界に就職。<br>その後約1年間Webデザインを学び、バナーやポスター、LP、Webサイトなどを制作しました。<br>「かわいさ」と「見やすさ」を両立したデザインを得意としています。</p>
+        </div>
+        <div class="about_sentence">
+          <p><strong>スキル：</strong>Photoshop／Illustrator／HTML／CSS／jQuery／Canva／Google Spread Sheet／色彩検定2級／TOEIC L&R 720点</p>
+        </div>
+      </div>
+		</div>
+		<a href="about.html" class="moving-underline moreview">More View >></a>
   </section>
+<!----- Works ----->
+  <section class="section_wrapper works">
+    <div class="contents_wrapper">
+      <div class="card-grid">
+        <!-- Webサイト -->
+        <a href="works.html#website" class="card-link" rel="noopener noreferrer">
+          <div class="card card_website">
+            <h3><img src="images/title_WEBSITE.png" alt="website" class="work-type-title"></h3>
+            <div class="mockup mockup_resp">
+              <img src="images/Mockup_ms_top_pc.png" class="mockup_pc">
+              <img src="images/Mockup_ms_top_iPhone14.png" class="mockup_mb">
+            </div>
+            <p>Webサイトの作品を見る</p>
+          </div>
+        </a>
+        <!-- LP(ランディングページ) -->
+        <a href="works.html#landingpage" class="card-link" rel="noopener noreferrer">
+          <div class="card card_lp">
+            <h3><img src="images/title_LANDINGPAGE.png" alt="landingpage" class="work-type-title"></h3>
+            <div class="mockup mockup_resp">
+              <img src="images/Mockup_SSFesta_top_pc.png" class="mockup_pc">
+              <img src="images/Mockup_SSFesta_top_iPhone14.png" class="mockup_mb">
+            </div>
+            <p>LP(ランディングページ)の作品を見る</p>
+          </div>
+        </a>
+        <a href="works.html#print" class="card-link" rel="noopener noreferrer">
+          <div class="card card_print">
+            <h3><img src="images/title_PRINT.png" alt="print" class="work-type-title"></h3>
+            <div class="mockup">
+              <img src="site_ms_illust/images/ms_poster_full_illust.jpg" class="works-print img-shadow">
+            </div>
+            <p>印刷物の作品を見る</p>
+          </div>
+        </a>
+        <a href="works.html#other" class="card-link" rel="noopener noreferrer">
+          <div class="card card_other">
+            <h3><img src="images/title_OTHER.png" alt="other" class="work-type-title"></h3>
+            <div class="mockup">
+              <img src="Ig_OmiyaRamen/images/Mockup_Ig_OmiyaRamen_1.jpeg" class="works-other img-shadow">
+            </div>
+            <p>その他の作品（ロゴ、SNS投稿など）を見る</p>
+          </div>
+        </a>
+      </div>
+    </div>
+<!-- 印刷物 -->
+<!-- その他 -->
+  </section>
+
 </main>
 
 <footer>
