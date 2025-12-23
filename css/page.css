@@ -4,6 +4,13 @@
 .skills {
   margin-top: 4rem
 }
+.skills h3 {
+  filter:
+    drop-shadow(2px 0 #fff)
+    drop-shadow(-2px 0 #fff)
+    drop-shadow(0 2px #fff)
+    drop-shadow(0 -2px #fff);
+}
 .skill_list {
   margin: 2rem auto 0;
   padding: 0;

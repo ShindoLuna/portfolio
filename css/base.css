@@ -17,10 +17,10 @@ body {
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   color: #333;
 }
-h1, h3, h4, li {
+h1, h4, li {
   font-family: 'Playfair Display', serif;
 }
-h2 {
+h2, h3 {
   font-family: "Monomaniac One", sans-serif;
 }
 a {
@@ -205,6 +205,20 @@ p {
 	max-width: 90vw;
 }
 
+/*===== moreview =====*/
+.moreview {
+  display: inline-block;
+  font-family: "Monomaniac One", sans-serif;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+    filter:
+    drop-shadow(2px 0 #fff)
+    drop-shadow(-2px 0 #fff)
+    drop-shadow(0 2px #fff)
+    drop-shadow(0 -2px #fff);
+}
+
 /* --- Moving Underline：アニメーション専用 --- */
 /* 共通：下線の流れるアニメーション */
 .moving-underline {
@@ -250,20 +264,14 @@ p {
     left: 100%;
   }
 }
-/* More View専用設定 */
-.moreview {
-  font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  display: inline-block;
-}
 .pagetop {
   font-family: "Monomaniac One", sans-serif;
   font-size: 30px;
   filter:
-    drop-shadow(1px 0 #fff)
-    drop-shadow(-1px 0 #fff)
-    drop-shadow(0 1px #fff)
-    drop-shadow(0 -1px #fff);
+    drop-shadow(2px 0 #fff)
+    drop-shadow(-2px 0 #fff)
+    drop-shadow(0 2px #fff)
+    drop-shadow(0 -2px #fff);
 }
 
 /*========== works ==========*/
@@ -455,19 +463,6 @@ p {
 }
 .about_sentence p {
 	text-align: left;
-}
-/*===== moreview =====*/
-.moreview {
-  display: inline-block;
-  font-family: "Monomaniac One", sans-serif;
-  font-size: 20px;
-  color: #333;
-  text-decoration: none;
-    filter:
-    drop-shadow(1px 0 #fff)
-    drop-shadow(-1px 0 #fff)
-    drop-shadow(0 1px #fff)
-    drop-shadow(0 -1px #fff);
 }
 
 
